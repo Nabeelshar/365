@@ -1,0 +1,13 @@
+name: Run daily
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+
+jobs:
+  run_daily:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run code
+        run: python code.py
